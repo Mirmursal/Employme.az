@@ -1,0 +1,82 @@
+@import 'variables';
+.container {
+    h3.title {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        padding: 0;
+        font-size: $titleFont;
+        color: #333;
+        text-transform: uppercase;
+        &:after {
+            content: '';
+            width: 60px;
+            height: 2px;
+            background: $primaryColor;
+            display: block;
+            margin-top: 6px;
+        }
+    }
+    ul {
+        list-style: none;
+        padding-left: 0;
+        li {
+            p {
+                font-size: $paragraphFont;
+                color: rgba(46, 39, 39, 0.8);
+                a {
+                    color: rgba(202, 32, 32, 0.8);
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    p.lucky {
+        font-weight: 500;
+    }
+    div {
+        .row {
+            position: relative;
+            .customPrevBtn,
+            .customNextBtn {
+                height: 30px;
+                width: 30px;
+                border: 1px solid $primaryColor;
+                position: absolute;
+                top: 36%;
+                z-index: 5;
+                &:hover {
+                    transition: all linear 0.3s;
+                    background-color: $primaryColor;
+                    i {
+                        color: white;
+                    }
+                }
+                cursor: pointer;
+                i {
+                    color: $primaryColor;
+                    position: relative;
+                    left: 10px;
+                    top: 4px;
+                }
+            }
+            .customNextBtn {
+                right: -15px;
+            }
+            .customPrevBtn {
+                left: -15px;
+            }
+        }
+    }
+}
+
+// media begin
+@media only screen and (max-width: 992px) {
+    .customNextBtn {
+        right: 0!important;
+    }
+    .customPrevBtn {
+        left: 0!important;
+    }
+}
+
+// media end

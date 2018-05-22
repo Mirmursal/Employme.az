@@ -1,0 +1,40 @@
+@import 'variables';
+nav {
+    margin-top:40px;
+    div.collapse {
+        ul.pull-right {
+            min-height: 50px;
+            li {
+                a {
+                    font-size: $paragraphFont;
+                    border-radius: 50%;
+                    &:hover {
+                        color: white !important;
+                        transition: all linear 0.2s;
+                        background-color: $primaryColor;
+                    }
+                }
+            }
+        }
+        ul.mr-auto {
+            min-height: 50px;
+            li.nav-item {
+                box-sizing: border-box;
+                a.nav-link {
+                    font-size: $titleFont;
+                    font-weight: 500;
+                    &:hover {
+                        border-bottom: 2px solid $primaryColor;
+                        box-sizing: border-box;
+                        transition: all ease 0.1s;
+                    }
+                }
+            }
+        }
+    }
+    .container{
+        button.navbar-toggler{
+            outline:none;
+        }
+    }
+}
